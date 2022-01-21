@@ -1,0 +1,153 @@
+body{
+    background-color: #fcfaf0;
+}
+
+hr{
+    color: #fcfaf0;
+}
+
+.menu{
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #0e5243;
+}
+/* #cce7eb #ccebd9 #0e524f #0e5243*/
+
+.logo-title{
+    font-family: "letter-magic", Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+.color-black{
+    background-color: black;
+}
+
+.content{
+    margin-left: 18%;
+    padding: 0 1rem;
+    display: grid;
+}
+
+.dashboard-content{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: masonry;
+    gap: 1em;
+}
+
+.modal-footer{
+    flex-wrap: nowrap !important; 
+    justify-content: space-between !important;
+}
+
+.form-select{
+    width: auto !important;
+}
+
+.form{
+    width: 25%;
+}
+
+textarea{
+    width: 100%;
+}
+
+.w-30{
+    width: 30%;
+}
+
+.bg-beige{
+    background-color: #fcfaf0;
+}
+
+.bg-pink{
+    background-color: #ffd1d9;
+}
+
+.bg-green{
+    background-color:#81B3A6;
+}
+
+.bg-darkgreen{
+    background-color:#0e5243;
+}
+.post-by{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.post-time{
+    font-size: x-small;
+    color: lightgray;
+    margin-bottom: 0px;
+}
+
+.card-details{
+    margin-top: auto 0;
+    padding: 0;
+}
+
+.card-tag{
+    text-align: end;
+    margin: auto 0;
+}
+
+.post-tag{
+    margin: auto 0;
+    text-decoration: none;
+    background-color: #FFEDB8;
+    border-radius: 20px;
+    color: black;
+    align-content: center;
+    text-align: end;    
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+
+.search-tag{
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    color: black;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.post-caption > p{
+    margin-top: 1rem;
+}
+
+.img-pfp{
+    border-radius: 0.25rem;
+}   
+
+/*#C4CFFF  #B8FFC5*/
+
+.brd-outline{
+    border: 1px solid black;
+}
+
+.option-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: black;
+    background-color: #ffd1d9;
+    border: 1px solid black;
+}
