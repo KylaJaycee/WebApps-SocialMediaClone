@@ -342,6 +342,16 @@ class Post{
                 $like_icon = "<i class='bi bi-heart-fill'></i>";
             }
  
+            //check if post is posted by active user
+            $user = $this->user_obj->getUsername();
+            if($post_by == $user){
+                $edit_del_btn = "<div class='option-btn'>
+                                    <i class='edit-btn bi bi-pencil-fill bg-pink brd-outline btn btn-outline-dark' data-bs-toggle='modal' data-bs-target='#editModal' data-id='$id'></i>
+                                    <i class='del-btn bi bi-trash-fill bg-pink brd-outline btn btn-outline-dark' data-bs-toggle='modal' data-bs-target='#deleteModal' data-id='$id'></i>
+                                </div>";
+            }else{
+                $edit_del_btn = "";
+            }
             $current_date_time = date("Y-m-d H:i:s");
             $start_date = new DateTime($post_date); //post date 
             $end_date= new DateTime($current_date_time); //current date
@@ -396,10 +406,7 @@ class Post{
                         <div class='card brd-outline'>
                             <div style='position: relative;'>
                                 <img src='$post_img' class='card-img-top'>
-                                <div class='option-btn'>
-                                    <i class='bi bi-pencil-fill bg-pink brd-outline btn btn-outline-dark' data-bs-toggle='modal' data-bs-target='#exampleModal'></i>
-                                    <i class='bi bi-trash-fill bg-pink brd-outline btn btn-outline-dark'></i>
-                                </div>
+                                $edit_del_btn
                             </div>
                             <div class='card-body row'>
                                 <div class='col'>
@@ -412,7 +419,7 @@ class Post{
                                         </div>
 
                                         <div class='col-5 card-tag'>
-                                            <a href='search_page.php' class='post-tag brd-outline btn-outline-dark'>#$post_tag</a>
+                                            <a href='search_page.php' class='post-tag brd-outline btn-outline-dark'>$post_tag</a>
                                         </div>
                                     </div>
 
